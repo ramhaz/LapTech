@@ -1,3 +1,9 @@
-{
-
-}
+[
+  {
+    "Id": 1,
+    "Name": "Intel Core i7",
+    "ManufacturerC": "Intel",
+    "Cores": "6",
+    "Speed": "3.6GHz"
+  }
+]

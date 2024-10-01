@@ -62,5 +62,15 @@ namespace LapTech.Repositories
                 JsonFileWriter.WriteToJsonLaptop(LaptopList, JsonLaptopPath);
             }
         }   
+
+        /*public List<CPU> GetAllCPU()
+        {
+            return JsonFileReader.ReadJsonCpu(JsonCPUPath);
+        }
+
+        public List<GPU> GetAllGPU()
+        {
+            return JsonFileReader.ReadJsonGpu(JsonGPUPath);
+        }*/
     }
 }

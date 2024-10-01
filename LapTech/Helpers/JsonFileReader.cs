@@ -7,7 +7,7 @@ using System.Text.Json;
 using LapTech.Models;
 
 
-namespace LapTech.Helpers
+namespace LapTech
 {
     public class JsonFileReader
     {

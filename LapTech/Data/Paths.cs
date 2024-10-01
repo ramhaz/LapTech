@@ -2,8 +2,8 @@
 {
     public class Paths
     {
-        public string JsonGPUPath = "C:\\Users\\sture\\OneDrive\\Skrivebord\\HubProjects\\LapTech\\LapTech\\Data\\CPU.json";
-        public string JsonCPUPath = "C:\\Users\\sture\\OneDrive\\Skrivebord\\HubProjects\\LapTech\\LapTech\\Data\\GPU.json";
-        public string JsonLaptopPath = "C:\\Users\\sture\\OneDrive\\Skrivebord\\HubProjects\\LapTech\\LapTech\\Data\\Laptop.json";
+        public string JsonGPUPath = "C:\\Users\\Halils Pc\\OneDrive - Danmarks Tekniske Universitet\\Dokumenter\\GitHub\\LapTech\\LapTech\\Data\\GPU.json";
+        public string JsonCPUPath = "C:\\Users\\Halils Pc\\OneDrive - Danmarks Tekniske Universitet\\Dokumenter\\GitHub\\LapTech\\LapTech\\Data\\CPU.json";
+        public string JsonLaptopPath = "C:\\Users\\Halils Pc\\OneDrive - Danmarks Tekniske Universitet\\Dokumenter\\GitHub\\LapTech\\LapTech\\Data\\Laptop.json";
     }
 }

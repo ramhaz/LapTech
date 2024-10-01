@@ -1,3 +1,6 @@
+using LapTech.Interfaces;
+using LapTech.Repositories;
+
 namespace LapTech
 {
     public class Program
@@ -8,6 +11,7 @@ namespace LapTech
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddSingleton<ILaptopRepository, JsonLaptopRepository>();
 
             var app = builder.Build();
 

@@ -2,13 +2,9 @@
 {
     public class GPU
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string ManufacturerG { get; set; }
-        public string Hukommelse { get; set; }
-        public int Fps { get; set; }
-
-        public int GameIdG { get; set; }
-
-
+        public string Memory { get; set; }
     }
 }

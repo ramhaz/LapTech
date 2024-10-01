@@ -1,3 +1,9 @@
-{
+[
+  {
+    "Id": 1,
+    "Name": "NVIDIA GTX 1650",
+    "Memory": "4GB",
+    "ManufacturerG": "NVIDIA"
+  }
+]
 
-}

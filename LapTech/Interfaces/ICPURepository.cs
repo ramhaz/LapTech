@@ -1,4 +1,6 @@
-﻿namespace LapTech.Interfaces
+﻿using LapTech.Models;
+
+namespace LapTech.Interfaces
 {
     public interface ICPURepository
     {
