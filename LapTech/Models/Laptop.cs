@@ -18,6 +18,8 @@
 
         public double GamerRating { get; set; }
 
+        public int Id { get; set; }
+
         GPU GPU { get; set; }
         CPU CPU { get; set; }
 
