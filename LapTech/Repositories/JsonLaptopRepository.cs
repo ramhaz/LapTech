@@ -1,7 +1,7 @@
 ﻿using LapTech.Models;
 using LapTech.Interfaces;
 using LapTech.Data;
-using LapTech.Helpers;
+
 
 namespace LapTech.Repositories
 {
@@ -62,15 +62,5 @@ namespace LapTech.Repositories
                 JsonFileWriter.WriteToJsonLaptop(LaptopList, JsonLaptopPath);
             }
         }   
-
-        /*public List<CPU> GetAllCPU()
-        {
-            return JsonFileReader.ReadJsonCpu(JsonCPUPath);
-        }
-
-        public List<GPU> GetAllGPU()
-        {
-            return JsonFileReader.ReadJsonGpu(JsonGPUPath);
-        }*/
     }
 }

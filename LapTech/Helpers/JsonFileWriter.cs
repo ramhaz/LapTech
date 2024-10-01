@@ -8,7 +8,7 @@ using LapTech.Models;
 
 
 
-namespace LapTech.Helpers
+namespace LapTech
 {
     public class JsonFileWriter
     {
