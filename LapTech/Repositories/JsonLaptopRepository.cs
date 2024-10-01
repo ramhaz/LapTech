@@ -1,10 +1,11 @@
 ﻿using LapTech.Models;
 using LapTech.Interfaces;
 using LapTech.Data;
+using LapTech.Helpers;
 
 namespace LapTech.Repositories
 {
-    public class JsonLaptopRepository
+    public class JsonLaptopRepository : ILaptopRepository
     {
         private string JsonGPUPath = new Paths().JsonGPUPath;
         private string JsonCPUPath = new Paths().JsonCPUPath;
@@ -14,27 +15,52 @@ namespace LapTech.Repositories
 
         public void CreateLaptop(Laptop laptop)
         {
-            throw new NotImplementedException;
+            LaptopList = JsonFileReader.ReadJsonLaptop(JsonLaptopPath);
+            int Id = 1; 
+            if (LaptopList.Any())
+            {
+                Id = LaptopList.Max(x => x.Id) + 1;
+            }
+            laptop.Id = Id;
+            LaptopList.Add(laptop);
+            JsonFileWriter.WriteToJsonLaptop(LaptopList.OrderBy(x => x.Id).ToList(), JsonLaptopPath);
+
         }
 
-        public void DeleteLaptop(Laptop laptop)
+        public void DeleteLaptop(int Id)
         {
-            throw new NotImplementedException;
+            LaptopList = JsonFileReader.ReadJsonLaptop(JsonLaptopPath);
+            LaptopList.RemoveAll(s => s.Id == Id);
+            JsonFileWriter.WriteToJsonLaptop(LaptopList, JsonLaptopPath);
         }
 
         public List <Laptop> GetAllLaptops()
         {
-            return JsonFile
+            return JsonFileReader.ReadJsonLaptop(JsonLaptopPath);
         }
 
         public Laptop GetLaptopById(int id)
         {
-            throw new NotImplementedException;
+            foreach (var laptop in JsonFileReader.ReadJsonLaptop(JsonLaptopPath))
+            {
+                if (laptop.Id == id)
+                {
+                    return laptop;
+                }
+                
+            }
+            return new Models.Laptop();
         }
 
         public void UpdateLaptop(Laptop laptop)
         {
-            throw new NotImplementedException;
+            if (laptop != null)
+            {
+                LaptopList = JsonFileReader.ReadJsonLaptop(JsonLaptopPath);
+                LaptopList.RemoveAll(s => s.Id == laptop.Id);
+                LaptopList.Add(laptop);
+                JsonFileWriter.WriteToJsonLaptop(LaptopList, JsonLaptopPath);
+            }
         }   
     }
 }
