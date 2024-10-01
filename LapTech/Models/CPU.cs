@@ -8,11 +8,7 @@
         public string Cores { get; set; }
         public string Speed { get; set; }
 
-        public string type { get; set; }
-        public string tysde { get; set; }
-        public string tfspe { get; set; }
-        public string tepe { get; set; }
-
+     
 
     }
 }
