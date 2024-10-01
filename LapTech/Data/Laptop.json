@@ -1,11 +1,12 @@
 [
   {
-    "Id": 1,  
+    "Id": 1,
     "Manufacturer": "Dell",
     "GPUId": 1,
-    "CPUid": 1 
+    "CPUid": 1,
     "RAM": "16GB",
     "Storage": 512,
-    "Price": 1500,
+    "Price": 1500
   }
 ]
+
