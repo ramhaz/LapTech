@@ -12,6 +12,9 @@ namespace LapTech
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddSingleton<ILaptopRepository, JsonLaptopRepository>();
+            builder.Services.AddScoped<IGPURepository, JsonGPURepository>();
+            builder.Services.AddScoped<ICPURepository, JsonCPURepository>();
+            builder.Services.AddScoped<ILaptopRepository, JsonLaptopRepository>();
 
             var app = builder.Build();
 

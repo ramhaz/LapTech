@@ -1,39 +1,32 @@
 ﻿@page
 @model LapTech.Pages.AllLaptopsModel
-@{
-}
 
 <h1>All Laptops</h1>
 
-<table class=" table">
+<table class="table">
     <thead>
         <tr>
-            <th>  Id  </th>
-            <th>  Manufactorer  </th>
-            <th>  GPU  </th>
-            <th>  CPU  </th>
-            <th>  RAM  </th>
-            <th>  Storage  </th>
-            <th>  Price  </th>
+            <th>Id</th>
+            <th>Manufacturer</th>
+            <th>GPU</th>
+            <th>CPU</th>
+            <th>RAM</th>
+            <th>Storage</th>
+            <th>Price</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var laptop in Model.Laptops)
         {
             <tr>
-                <td>  @laptop.Id  </td>
-                <td>  @laptop.Manufacturer  </td>
-                <td>  @laptop.GPUId  </td>
-                <td>  @laptop.CPUId  </td>
-                <td>  @laptop.RAM  </td>
-                <td>  @laptop.Storage  </td>
-                <td>  @laptop.Price  </td>
+                <td>@laptop.Id</td>
+                <td>@laptop.Manufacturer</td>
+                <td>@laptop.GPU?.Name</td> <!-- Display GPU Name -->
+                <td>@laptop.CPU?.Name</td> <!-- Display CPU Name -->
+                <td>@laptop.RAM</td>
+                <td>@laptop.Storage</td>
+                <td>@laptop.Price</td>
             </tr>
         }
     </tbody>
-    <td>
-        <a asp-page="/Pages/CreateLaptop">
-            Update
-        </a>
-    </td>
 </table>
